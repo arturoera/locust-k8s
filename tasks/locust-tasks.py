@@ -12,7 +12,7 @@ class MetricsTaskSet(TaskSet):
 
     @task(2)
     def login(self):
-        self.client.post("/login", {"username": "test", "password": "secret"})
+        self.client.post("accounts/login/", {"username": "test", "password": "secret"})
 
 
 class MetricsLocust(HttpLocust):
